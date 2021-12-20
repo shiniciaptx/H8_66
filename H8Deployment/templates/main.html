@@ -1,0 +1,15 @@
+<html>
+<body>    
+<h1>Student Placement Classifier</h1>
+
+    <form action="{{url_for('predict')}}" method="post">
+        <input type="text" name="ssc" placeholder="Secondary Education" required="required" />
+        <input type="text" name="hsc" placeholder="Highschool" required="required" />
+        <input type="text" name="degree" placeholder="Degree" required="required" />
+        <input type="text" name="etest" placeholder="Interview Score" required="required" />
+
+        <button type="submit"> Predict</button>
+    </form> 
+    <h2>{{ prediction_text }}</h2>
+</body>
+</html>
